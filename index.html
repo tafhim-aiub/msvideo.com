@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Welcome to Our Premium Content</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #4CAF50, #2E8B57);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        iframe {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transform: scale(1.1);
+            position: relative;
+        }
+
+        #watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 <body>
-    <iframe src="https://onedrive.live.com/embed?resid=33C1F09C0ECAAE90%213226&authkey=!ABvO3bCIRTObABE" width="320" height="320" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    
+<iframe src="https://onedrive.live.com/embed?resid=33C1F09C0ECAAE90%213226&authkey=!AEQtDbvGsFlnh6o" width="400" height="400" frameborder="0" scrolling="no" allowfullscreen sandbox="allow-same-origin allow-scripts"></iframe>
+
+<div id="watermark">Tafhimul Islam</div>
+
+<script>
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            // Screen recording detected, show security overlay
+            document.getElementById('securityOverlay').style.display = 'block';
+        } else {
+            // User is back on the page, hide security overlay
+            document.getElementById('securityOverlay').style.display = 'none';
+        }
+    });
+</script>
+
 </body>
 </html>
